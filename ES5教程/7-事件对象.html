@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <button id="btn1">按钮</button>
+        <a href="http://baidu.com" id="aid">百度</a>
+    </div>
+    <script>
+        //事件是用户或浏览器自身执行的某种可以触发js函数的动作
+        //document对象是HTMLDocument（继承自Document类型）的一个实例，表示整个HTML页面
+        document.getElementById("btn1").addEventListener("click",showType)
+        //document.getElementById("id名")   DOM操作获取document下的id="id名"的第一个DOM元素 getElementById是对象的方法
+        /*  element.addEventListener(event,function,useCapture) 绑定事件（给DOM元素绑定事件处理函数）
+        element：DOM操作获得的对象
+        event: (必须)事件名
+        function:(必须）事件触发时执行的函数
+        useCapture；（可选）指定事件在捕获还是冒泡阶段执行。true,捕获。false（默认），冒泡。*/
+
+        document.getElementById("div").addEventListener("click",function showDiv(){alert("div")})
+        document.getElementById("aid").addEventListener("click",showA)
+        function showType(event){
+            alert(event.type)
+            alert(event.target)
+            event.stopPropagation()
+            //event.type 获取事件类型
+            //event.target 获取事件目标
+            //event.stopPropagation() 阻止事件冒泡
+        }
+        //事件冒泡：事件由最具体元素触发，然后逐级向上传播到较不具体的节点（元素）
+        //事件捕获：事件由较不具体元素触发，然后逐级向下传播到最具体的节点
+       /*  DOM事件流：事件捕获阶段、处于目标阶段、事件冒泡阶段 
+               事件捕获阶段：向下捕获事件直到最具体元素上一级（包含上一级），根据useCapture参数是否触发事件
+               处于目标阶段：目标（最具体元素）触发事件
+               事件冒泡阶段：目标触发事件后从最具体元素上一级（包含上一级）向上冒泡，根据useCapture参数是否触发事件 */
+        
+        //在触发DOM上的事件时，会产生一个event对象。DOM事件处理函数形参第一个参数默认event对象
+        function showA(e){
+            e.stopPropagation()
+            e.preventDefault()
+            //event.preventDefault() 阻止特定事件默认行为（只有cancelable属性设置为true的时间才能用它阻止）
+        }
+    </script>
+</body>
+</html>
