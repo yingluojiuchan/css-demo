@@ -26,7 +26,8 @@
         alert("clicked");
     }
 </script>
-    <!--DOM2级事件处理程序  -->
+    
+    <!-- DOM2级事件处理程序 -->
 <div id="div">
         <button id="btn1">按钮</button>
         <a href="http://baidu.com" id="aid">百度</a>
@@ -35,8 +36,8 @@
         document.getElementById("btn1").addEventListener("click",showType)
         /*  element.addEventListener(event,function,useCapture) 绑定事件（给DOM元素绑定事件处理函数）
         element：DOM操作获得的对象
-        event: (必须)事件名
-        function:(必须）事件触发时执行的函数
+        event: (必选)事件名
+        function:(必选）事件触发时执行的函数
         useCapture；（可选）指定事件在捕获还是冒泡阶段执行。true,捕获。false（默认），冒泡。*/
 
         document.getElementById("div").addEventListener("click",function showDiv(){alert("div")})
@@ -45,7 +46,7 @@
             alert(event.type)
             alert(event.target)
             event.stopPropagation()
-            //onclick是绑定事件，click本身是方法作用是触发onclick事件
+            //onclick是绑定事件，click是方法，作用是触发onclick事件
             //event.type 获取事件类型
             //event.target 获取事件目标
             //event.stopPropagation() 阻止事件冒泡
