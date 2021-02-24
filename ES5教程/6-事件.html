@@ -38,7 +38,7 @@
         element：DOM操作获得的对象
         event: (必选)事件名
         function:(必选）事件触发时执行的函数
-        useCapture；（可选）指定事件在捕获还是冒泡阶段执行。true,捕获。false（默认），冒泡。*/
+        useCapture；（可选）是否使用事件捕获。true,事件捕获阶段执行。false（默认），事件冒泡阶段执行。*/
 
         document.getElementById("div").addEventListener("click",function showDiv(){alert("div")})
         document.getElementById("aid").addEventListener("click",showA)
@@ -53,10 +53,9 @@
         }
         //事件冒泡：事件由最具体元素触发，然后逐级向上传播到较不具体的节点（元素）
         //事件捕获：事件由较不具体元素触发，然后逐级向下传播到最具体的节点
-        /*  DOM事件流：事件捕获阶段、处于目标阶段、事件冒泡阶段 
-               事件捕获阶段：向下捕获事件直到最具体元素上一级
-               处于目标阶段：目标（最具体元素）触发事件，根据useCapture参数归属到不惑还是冒泡阶段
-               事件冒泡阶段：目标触发事件后从最具体元素上一级向上冒泡 */
+        /*  DOM事件流：先捕获后冒泡
+               事件捕获阶段：window元素向下触发事件到最具体元素
+               事件冒泡阶段：最具体元素向上（直到window元素）触发事件 */
         
         //在触发DOM2级事件时，会产生一个event对象。DOM事件处理函数形参第一个参数默认event对象
         function showA(e){
