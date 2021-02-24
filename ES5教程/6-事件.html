@@ -28,6 +28,11 @@
 </script>
     
     <!-- 3.DOM2级事件处理程序 -->
+    //事件冒泡：事件由最具体元素触发，然后逐级向上传播到较不具体的节点（元素）
+        //事件捕获：事件由较不具体元素触发，然后逐级向下传播到最具体的节点
+        /*  DOM2级事件流：先捕获后冒泡
+               事件捕获阶段：window元素向下触发事件到最具体元素
+               事件冒泡阶段：最具体元素向上（直到window元素）触发事件 */
 <div id="div">
         <button id="btn1">按钮</button>
         <a href="http://baidu.com" id="aid">百度</a>
@@ -38,7 +43,7 @@
         element：DOM操作获得的对象
         event: (必选)事件名
         function:(必选）事件触发时执行的函数
-        useCapture；（可选）是否使用事件捕获。true,事件捕获阶段执行。false（默认），事件冒泡阶段执行。*/
+        useCapture；（可选）是否使用事件捕获。true,只执行事件捕获阶段。false（默认），只执行事件冒泡阶段。*/
 
         document.getElementById("div").addEventListener("click",function showDiv(){alert("div")})
         document.getElementById("aid").addEventListener("click",showA)
@@ -49,13 +54,9 @@
             //onclick是绑定事件，click是方法，作用是触发onclick事件
             //event.type 获取事件类型
             //event.target 获取事件目标
-            //event.stopPropagation() 阻止事件冒泡
+            //event.stopPropagation() 阻止事件流的进一步传播
         }
-        //事件冒泡：事件由最具体元素触发，然后逐级向上传播到较不具体的节点（元素）
-        //事件捕获：事件由较不具体元素触发，然后逐级向下传播到最具体的节点
-        /*  DOM事件流：先捕获后冒泡
-               事件捕获阶段：window元素向下触发事件到最具体元素
-               事件冒泡阶段：最具体元素向上（直到window元素）触发事件 */
+        
         
         //在触发DOM2级事件时，会产生一个event对象。DOM事件处理函数形参第一个参数默认event对象
         function showA(e){
