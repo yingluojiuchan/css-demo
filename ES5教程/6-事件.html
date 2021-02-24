@@ -57,8 +57,7 @@
             //event.stopPropagation() 阻止事件流的进一步传播
         }
         
-        
-        //在触发DOM2级事件时，会产生一个event对象。DOM事件处理函数形参第一个参数默认event对象
+        //触发DOM2级事件时，会产生一个event对象。DOM事件处理函数形参第一个参数默认event对象
         function showA(e){
             e.stopPropagation()
             e.preventDefault()
