@@ -8,15 +8,15 @@
     <title>Document</title>
     <style>
         div {
-            
             width: 500px;
             height: 200px;
             background-color: red;
             background-image: url(logo.png);
             background-repeat: no-repeat;
             background-position: center top;
-            background-attachment: fixed
+            /* background-attachment: fixed */
         }
+
         /* img标签与background属性插入图片的差异：1.background属性插入图片需要先定义一个容器；
                                                 2.img标签插入图片上不能放文字，background属性插入图片可以 */
         /* background-color定义元素背景颜色
@@ -25,45 +25,45 @@
                              十六进制值      例#FF0000
                              RGB值           例rgb(255,0,0)
                              RGBA值          例rgba(255,0,0,0.5)  alpha通道定义透明度，范围[0,1]，随数值增大透明度下降，小数可省0.，例rgba(255,0,0，0.5)等价rgba(255,0,0,5)*/
-        
+
         /* background-image指定元素的背景图像，背景图像会覆盖背景颜色
            background-image:none 默认无背景图
                             url(url)   ()里的url为指定背景图像的绝对/相对路径 */
-        
+
         /* background-repeat定义元素的背景图像的平铺方式
            background-repeat:repeat 默认，x、y方向平铺
                              no-repeat 不平铺 
                              repeat-x 仅沿x方向平铺
                              repeat-y 仅沿y方向平铺 */
-       
+
         /* background-position定义背景图片在盒子中位置
            background-position:0% 0% 默认
                                方位名词x 方位名词y
-                               方位名词x:left、center、right
-                               方位名词y:top、center、bottom,方位名词x、y可调换顺序，例left top等价top left，若方位名词y省略，则方位名词y默认center
-                               百分数x 百分数y 
-                               计算公式:(container width - image width) * (position x%) = (x offset value)
-                                        (container height - image height) * (position y%) = (y offset value)
-                                百分数y可省略
+                               方位名词x:left、center、right    
+                               方位名词y:top、center、bottom
+                               方位名词x换算x%公式：left=0% center=50% right=100%
+                               方位名词y换算y%公式：top=0% center=50% bottom=100%
+                               方位名词x、y调换顺序等价，例left top等价top left
+                               若方位名词y省略，则方位名词y默认center
+                               
+                               x% y% 
+                               x、y范围(-无穷,+无穷)
+                               x%换算xpx公式:(盒子宽-图片宽) * x% = x
+                               y%换算ypx公式:(盒子高-图片高) * y% = y
+                               x%、y%调换顺序不等价，例10% 20%不等价20% 10%
+                               若y%省略，则y%默认center
 
-           x坐标：精确单位（百分数、像素值）、方位名词(left、center、right,方位名词left、center、right是相对于页面不滚动的界面)
-           y坐标：精确单位（百分数、像素值）、方位名词(top、center、bottom)
-           1.参数只有方位名词
-           若x、y坐标都为方位名词，则两个值可调换顺序，比如left top和top left效果一致；若x坐标值指定一个方位名词，y坐标值省略，则y坐标值默认center
-           2.参数只有精确单位
-           若x、y坐标都为精确单位(像素值范围(-无穷,+无穷))，则两个值不能调换顺序；若x坐标值指定一个精确单位，y坐标值省略，则y坐标值默认center
-           3.参数既有精确单位又有方位名词，则值不能调换顺序
-           精确单位以左上角为原点o，向右为x轴，向下为y轴 
-           
-           
-           
-           
-           */
-        
+                               xpx ypx
+                               以背景左上角为原点，向右、向下为偏移x、ypx
+                               xpx、ypx调换顺序不等价,例1px 2px不等价2px 1px
+                               x、y范围(-无穷,+无穷)
+                               若ypx省略，则ypx默认center
+
+                               方位名词、百分数、像素值可混搭，但调换顺序不等价 */
+
         /* background-attachment定义背景图片随页面滚动滚动还是固定不动
            background-attachment:scroll 默认，背景图片随页面滚动滚动
                                  fixed 背景图片随页面滚动固定 */
-        
     </style>
 </head>
 
