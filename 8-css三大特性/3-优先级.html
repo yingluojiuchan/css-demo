@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color:pink!important
+        }
+        .test{
+            color: red;
+        }
+        /* 选择器相同，执行层叠性；选择器不同，根据选择器权重执行 
+        选择器                      选择器权重
+        继承/*                       0,0,0,0
+        元素选择器                   0,0,0,1
+        类/伪类选择器                0,0,1,0
+        ID选择器                     0,1,0,0
+        行内样式style=""             1,0,0,0
+        !important                    无穷大  */ 
+    
+        ul li{
+            color: green;
+        }
+        li{
+            color:red
+        }
+        /* 1.复合选择器权重会叠加,但不会进位 例ul li权重 0,0,0,1+0,0,0,1=0,0,0,2
+           2.权重大小判断从左往右，若某一位数值相同，则判断下一位数值 */
+    </style>
+</head>
+<body>     
+    <div class="test">你笑起来真好看</div>
+    <ul>
+        <li>大猪蹄子</li>
+        <li>大肘子</li>
+        <li>猪尾巴</li>
+    </ul>
+</body>
+</html>
