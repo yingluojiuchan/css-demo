@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: pink;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* width定义元素宽度，默认设置内容宽度
+           width:像素值
+                 auto 默认值 浏览器自动计算宽度，元素高度自适应元素内容宽度。
+
+           height定义元素高度，默认设置内容高度
+           height:像素值
+                  auto 默认值 浏览器自动计算高度，元素高度自适应元素内容高度。
+
+           border-width定义边框粗细
+           border-left-width定义左边框粗细
+           border-right-width定义右边框粗细 
+           border-top-width定义上边框粗细
+           border-bottom-width定义下边框粗细
+           border-width/ border-left-width/border-right-width border-top-width/border-bottom-width:像素值
+
+           border-style定义边框样式
+           border-style:solid      实线边框
+                        dashed     虚线边框
+                        dotted     点线边框
+
+           border-style定义边框颜色 
+           
+           padding定义内边距
+           padding-left定义左内边距
+           padding-right定义右内边距
+           padding-top定义上内边距
+           padding-bottom定义下内边距
+           padding/padding-left/padding-right/padding-top/padding-bottom:像素值 
+           
+           margin定义外边距
+           margin-left定义左外边距
+           margin-right定义右外边距
+           margin-top定义上外边距
+           margin-bottom定义下边距  
+           margin/margin-left/margin-right/margin-top/margin-bottom:像素值  */
+
+
+        table {
+            width: 500px;
+            height: 249px;
+        }
+
+        table,
+        td {
+            border-width: 1px;
+            border-style: solid;
+            border-color: pink;
+            border-collapse: collapse;
+        }
+
+        /* border-collapse定义表格相邻单元格边框是分开还是合并
+           border-collapse:separate    默认,每个单元格有独立的边框
+                           collapse    相邻单元格共用同一条边框*/
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- 所有元素都是一个盒模型 -->
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>刘德华</td>
+            <td>男</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>张学友</td>
+            <td>男</td>
+            <td>58</td>
+        </tr>
+    </table>
+</body>
+
+</html>
