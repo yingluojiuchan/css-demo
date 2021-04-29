@@ -11,10 +11,16 @@
             font-family: 'Microsoft YaHei','Times New Roman',Times, serif;
             font-weight: bold;
         }
-        /* font-family属性定义字体类型，若属性值是多个英文单词或中文，需加双引号*/
-        /* font-family属性多个属性值原因：每个人电脑装的字体不一样，属性值从左到右与系统安装字体匹配，若没有属性匹配，则默认宋体 */
-        /* font-size属性定义字体大小（字体的宽高），谷歌浏览器默认16px，font-size: 像素值 */
-        /* font-weight属性字体粗细（字体的肥瘦） font-weight: bold(较粗）*/
+        /* font-family属性定义字体类型，若属性值是多个英文单词或中文，需加单引号
+           font-family属性多个属性值原因：不同的操作系统、不同浏览器下内嵌的默认字体不同，属性值从左到右与系统安装字体匹配，若没有属性匹配，则默认字体 */
+        
+        /* font-size属性定义字体大小（字体的宽高）
+        font-size:16px，默认
+                  像素值  */
+        
+        /* font-weight属性字体粗细（字体的肥瘦） 
+            font-weight:normal,默认
+                        bold   较粗 */
         /* 标题标签比较特殊，需要单独指定文字大小 */
        
         .deeppink {
@@ -30,7 +36,7 @@
             color: rgba(29, 177, 41, 0.5);
         }
         /* color属性定义字体颜色
-           color: 颜色名称英文    例red,blue
+           color: 颜色英文名称    例red,blue
                   十六进制值      例#FF0000,#FF6600等
                   RGB值           例rgb(255,0,0)
                   RGBA值          例rgba(255,0,0，0.5)  alpha通道定义透明度，范围[0,1]，随数值增大透明度下降，小数可省0.，例rgba(255,0,0，0.5)等价rgba(255,0,0,5)*/
