@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .damao,
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .damao {
+            margin-bottom: 100px;
+        }
+
+        .ermao {
+            margin-top: 200px;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+            border: 1px solid transparent;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+    <!-- 相邻块元素垂直外边距重叠：当上下相邻的两个兄弟关系的块元素相遇时，他们的垂直间距不是上面的元素的下外边距margin-bottom与下面的元素上边距margin-top之和，而是max(margin-bottom,margin-top)  
+     解决方案：尽量只给一个盒子添加margin值 -->
+    <div class="father">
+        <div class="son"></div>
+        <!-- 嵌套块元素垂直外边距的塌陷：两个父子关系的块元素，父元素上边距会塌陷成max(父元素上边距，子元素上边距) ，子元素上边距会变成0px；父元素下边距会塌陷成max(父元素下边距，子元素下边距) ，子元素下边距会变成0p
+    解决方案：给父元素添加overflow:hidden,浮动、固定、绝对定位的盒子不会塌陷-->
+    </div>
+</body>
+
+</html>

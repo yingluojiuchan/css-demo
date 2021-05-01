@@ -30,43 +30,47 @@
            border-right-width定义右边框粗细 
            border-top-width定义上边框粗细
            border-bottom-width定义下边框粗细
-           border-width/border-left-width/border-right-width/border-top-width/border-bottom-width:medium,默认值
-                                                                                                  像素值 */
+           border-width/border-left-width/border-right-width/border-top-width/border-bottom-width: 像素值 */
 
         /* border-style定义边框样式
            border-left-style定义左边框样式
-           border-right-style定义右边框样式 
+           border-right-style定义右边框样式 -
            border-top-style定义上边框样式
            border-bottom-style定义下边框样式
-           border-style/border-left-style/border-right-style/border-top-style/border-bottom-style:none,默认值
-                                                                                                  solid      实线边框
+           border-style/border-left-style/border-right-style/border-top-style/border-bottom-style:solid      实线边框
                                                                                                   dashed     虚线边框
                                                                                                   dotted     点线边框 */
-           
+                                                                                                  
         /* border-color定义边框颜色
            border-left-color定义左边框样式
            border-right-color定义右边框样式 
            border-top-color定义上边框样式
            border-bottom-color定义下边框样式
-           border-color/border-left-color/border-right-color/border-top-color/border-bottom-color:none,默认值
-                                                                                                  颜色英文名称
+           border-color/border-left-color/border-right-color/border-top-color/border-bottom-color:颜色英文名称
                                                                                                   十六进制值
                                                                                                   RGB值
                                                                                                   RGBA值 */
-           
-        /* padding定义内边距
+                                                                                                            
+        /* padding定义内边距,边框与元素内容间的距离
            padding-left定义左内边距
            padding-right定义右内边距
            padding-top定义上内边距
            padding-bottom定义下内边距
            padding/padding-left/padding-right/padding-top/padding-bottom:像素值 */ 
            
-        /*  margin定义外边距
+        /* margin定义外边距，即当前元素和相邻元素间的距离
+           margin指定一个值时，该值会统一应用到全部四个边的外边距上
+                 指定两个值时，第一个值应用于上和下外边距，第二个值应用于左和右外边距
+                 指定三个值时，第一个值应用于上外边距，第二个值应用于右和左外边距，第三个则应用于下外边距
+                 指定四个值时，依次作为上、右、下、左（顺时针方向）外边距
+           margin每个值可为auto（浏览器自己选择一个合适的外边距）、像素值
+
            margin-left定义左外边距
            margin-right定义右外边距
            margin-top定义上外边距
            margin-bottom定义下边距  
-           margin/margin-left/margin-right/margin-top/margin-bottom:像素值   */
+           margin-left/margin-right/margin-top/margin-bottom:auto    浏览器自己选择一个合适的外边距
+                                                             像素值   */
 
 
         table {
@@ -85,6 +89,7 @@
         /* border-collapse定义表格相邻单元格边框是分开还是合并
            border-collapse:separate    默认,每个单元格有独立的边框
                            collapse    相邻单元格共用同一条边框*/
+
     </style>
 </head>
 
@@ -107,7 +112,7 @@
             <td>男</td>
             <td>58</td>
         </tr>
-    </table>
+    </table> 
 </body>
 
 </html>
